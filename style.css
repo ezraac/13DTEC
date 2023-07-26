@@ -39,6 +39,12 @@ canvas {
   height: 15vh;
 }
 
+.container {
+  background-color: #61d6e6;
+  border-radius: 50vw;
+  padding: 1vh 1vw 1vh 1vw;
+}
+
 /*------------------------------------------------------------*
   LANDING page styling
 /*------------------------------------------------------------*/
@@ -67,10 +73,6 @@ canvas {
 }
 
 #navigation {
-  background-color: #61d6e6;
-  border-radius: 50vw;
-  padding: 1vh 1vw 1vh 1vw;
-
   margin-left: 10vw;
   margin-right: 10vw;
   margin-top: 25px;
@@ -96,6 +98,26 @@ canvas {
 #title {
   text-align: center;
   grid-column: 7/9;
+}
+
+/* SEARCH ICON CSS*/
+#searchContainer {
+  width: 20vw;
+}
+
+#search {
+  width: 18vw;
+  border-radius: 50vw;
+  border: none;
+  background-image: url(images/magnifying\ glass.png);
+  background-size: 1vw;
+  background-position: 5px;
+  padding-left: 2vw;
+  background-repeat: no-repeat;
+}
+
+.search-open {
+  
 }
 
 
