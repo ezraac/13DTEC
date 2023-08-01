@@ -25,6 +25,8 @@
   <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-database.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"></script>
   <!-- firebase end ********************************-->
+  <!-- JQUEARY -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
   <script defer src="data.js"></script>
   <script defer src="src/html_manager.js"></script>
@@ -33,6 +35,7 @@
   <script defer src="modules/fb_io.js"></script>
   <script defer src="game_manager.js"></script>
   <script defer src="popTheBall.js"></script>
+  <script defer src="src/animations.js"></script>
 </head>
 
 <!--***************************************************
@@ -50,20 +53,27 @@
     <header>
       <div id="navigation" class="container">
         <img src="images/game icon.png" id="gameIcon">
-        <div id="breadcrumbBG">
-          <p id="breadcrumb" style="font-size: 1rem; text-align: center;">Home</p>
-        </div>
+        <p id="breadcrumb" style="font-size: 1rem; text-align: center;">Home</p>
 
         <h3 id="title">arcade-o</h3>
 
+        <div id="searchContainer" class="container">
+          <input type="text" placeholder="Search" id="search">
+        </div>
+
+        <img src="images/Hamburger_icon.png" id="hamburgerIcon">
+        <img src="images/account (1).png" id="accountIcon">
+
+        <img src="images/magnifying glass.png" id="searchIcon">
+
         
         
-
       </div>
 
-      <div id="searchContainer" class="container">
-        <input type="text" placeholder="Search" id="search">
-      </div>
+      
+
+
+      
 
       <!-- admin button -->
       <!-- <div class="w3-container w3-grey w3-col m2">
