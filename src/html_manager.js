@@ -84,7 +84,7 @@ function HTML_editGameInfo(game) {
 function HTML_loadPage() {
     document.getElementById("landingPage").style.display = "block";
     document.getElementById("loadingText_BG").style.display = "none";
-
+    document.getElementById("accountIcon").src = userDetails.photoURL
 }
 
 /*****************************************************/

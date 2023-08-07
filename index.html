@@ -11,7 +11,8 @@
   <!-- stylesheets *********************************-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- P5.js ***************************************-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.min.js"></script>
@@ -53,7 +54,7 @@
     <header>
       <div id="navigation" class="container">
         <img src="images/game icon.png" id="gameIcon">
-        <p id="breadcrumb" style="font-size: 1rem; text-align: center;">Home</p>
+        <p id="breadcrumb" style="font-size: 1rem; text-align: center; margin: auto;">Home</p>
 
         <h3 id="title">arcade-o</h3>
 
@@ -61,8 +62,19 @@
           <input type="text" placeholder="Search" id="search">
         </div>
 
-        <img src="images/Hamburger_icon.png" id="hamburgerIcon">
-        <img src="images/account (1).png" id="accountIcon">
+        <!-- <img src="images/Hamburger_icon.png" id="hamburgerIcon"> -->
+        <div id="hamburgerIcon">
+          <li class="toggle">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </li>
+        </div>
+        <div id="accountContainer">
+          <img src="images/account (1).png" id="accountIcon">
+
+          <div class="subContainer" id="accountDetails"></div>
+        </div>
 
         <img src="images/magnifying glass.png" id="searchIcon">
 

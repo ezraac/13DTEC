@@ -8,7 +8,6 @@ html {
   padding: 0px;
   font-family: tahoma;
   color: black;
-  transition: all 0.3s;
 }
 
 body {
@@ -42,6 +41,12 @@ canvas {
 
 .container {
   background-color: #61d6e6;
+  border-radius: 50vw;
+  padding: 1vh 1vw 1vh 1vw;
+}
+
+.subContainer {
+  background-color: #addfe6;
   border-radius: 50vw;
   padding: 1vh 1vw 1vh 1vw;
 }
@@ -80,6 +85,7 @@ canvas {
 
   display: grid;
   grid-template-columns: repeat(16, 5vw);
+  transition: all 0.3s;
 }
 
 #gameIcon {
@@ -94,6 +100,7 @@ canvas {
 #title {
   text-align: center;
   grid-column: 7/10;
+  font-size: 2vw;
 }
 
 #hamburgerIcon {
@@ -102,14 +109,34 @@ canvas {
   grid-column: 14;
   grid-row: 1;
   margin: auto;
+  position: relative;
+  transition: all 0.3s;
+}
+
+/* ACCOUNT ICON CSS */
+#accountContainer {
+  grid-column: 15;
+  grid-row: 1;
+  margin: auto;
+  transition: all 0.3s;
 }
 
 #accountIcon {
   width: 3.5vw;
   height: 3.5vw;
-  grid-column: 15;
-  grid-row: 1;
   margin: auto;
+  border-radius: 50vw;
+  border-width: 3px;
+  border-style: solid;
+  cursor: pointer;
+}
+
+#accountDetails {
+  height: 20vw;
+  width: 10.5vw;
+  position: absolute;
+  margin: 5vh 0 0 -3.5vw;
+  transition: all 0.3s;
 }
 
 /* SEARCH ICON CSS*/
@@ -120,8 +147,8 @@ canvas {
   grid-row: 1;
   margin: auto;
   cursor: pointer;
+  position: relative;
 }
-
 
 #searchContainer {
   width: 20vw;
@@ -140,10 +167,6 @@ canvas {
   background-position: 5px;
   padding-left: 2vw;
   background-repeat: no-repeat;
-}
-
-.search-open {
-
 }
 
 
