@@ -98,3 +98,6 @@ function HTML_returnPage() {
 }
 
 
+function hi() {
+    console.log("hi")
+}

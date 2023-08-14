@@ -19,6 +19,7 @@ body {
 
 p {
   color: #2b2b2b;
+  font-size: 1vw;
 }
 
 canvas {
@@ -49,6 +50,33 @@ canvas {
   background-color: #addfe6;
   border-radius: 50vw;
   padding: 1vh 1vw 1vh 1vw;
+}
+
+.highlightText {
+  background-color: #ffffff;
+  border-radius: 5vw;
+  padding: 1vh 1vw 1vh 1vw;
+  margin-top: -1vh;
+}
+
+.button {
+  font-size: 1vw;
+  background-color: #ffffff;
+  border-radius: 1vw;
+  border-style: none;
+  padding: 1vw 1vw 1vw 1vw;
+  margin: 1vw auto;
+  display: block;
+}
+
+.button:hover {
+  box-shadow: #888888 1px 2px;
+  transition: all 0.3s ease;
+}
+
+.button:active {
+  box-shadow: none;
+  transform: translateY(1px);
 }
 
 /*------------------------------------------------------------*
@@ -111,6 +139,18 @@ canvas {
   margin: auto;
   position: relative;
   transition: all 0.3s;
+  border-radius: 50vw;
+}
+
+#hamburgerIcon:hover {
+  box-shadow: #888888 2px 2px 2px 2px;
+  padding: 5px;
+  transition: all 0.3s ease;
+}
+
+#hamburgerIcon:active {
+  box-shadow: none;
+  transform: translateY(1px);
 }
 
 /* ACCOUNT ICON CSS */
@@ -131,13 +171,28 @@ canvas {
   cursor: pointer;
 }
 
+#accountIcon:hover {
+  box-shadow: #888888 2px 2px 2px 2px;
+  transition: all 0.3s ease;
+}
+
+#accountIcon:active {
+  box-shadow: none;
+  transform: translateY(1px);
+}
+
 #accountDetails {
-  height: 20vw;
-  width: 10.5vw;
+  background-color: #92e8f3;
+  border-radius: 1vw;
+  padding: 1vh 1vw 1vh 1vw;
+  height: 26vw;
+  width: 15vw;
   position: absolute;
-  margin: 5vh 0 0 -3.5vw;
+  margin: 3.5vh 0 0 -5vw;
   transition: all 0.3s;
 }
+
+
 
 /* SEARCH ICON CSS*/
 #searchIcon {
@@ -155,7 +210,7 @@ canvas {
   grid-column: 12;
   grid-row: 1;
   margin: auto;
-  border-style: outset;
+  box-shadow: #2b2b2b 2px 1px 2px 1px;
 }
 
 #search {
