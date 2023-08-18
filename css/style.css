@@ -105,6 +105,8 @@ canvas {
   display: grid;
   grid-template-columns: repeat(16, 5vw);
   transition: all 0.3s;
+  position: absolute;
+  z-index: 10;
 }
 
 #gameIcon {
@@ -213,8 +215,20 @@ canvas {
   background-repeat: no-repeat;
 }
 
+/* hero image */
+#hI_background {
+  width: 100%;
+  height: 35vw;
+  opacity: 9%;
+  background-color: #61d6e6;
+  z-index: 9;
+}
 
-
+#heroImage {
+  width: 50vw;
+  height: 25vw;
+  transform: translate(50%, 35%);
+}
 
 /*game page css*/
 #game_oneThird {
