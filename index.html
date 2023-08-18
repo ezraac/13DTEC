@@ -51,6 +51,7 @@
   //  landingPage
   ****************************************************-->
   <section id="landingPage">
+    
     <header>
       <div id="navigation" class="container">
         <img src="images/game icon.png" id="gameIcon">
@@ -62,9 +63,24 @@
           <input type="text" placeholder="Search" id="search">
         </div>
 
-        <img src="images/Hamburger_icon.png" id="hamburgerIcon">
+        <div id="hamburgerContainer">
+          <img src="images/Hamburger_icon.png" id="hamburgerIcon" class="navbutton">
+
+          <div id="hamburgerMenu">
+            <h3 style="text-align: center; font-size: 2vw; margin-top: 0;">Menu</h3>
+
+            <button class="button" id="hamburger_home" style="width: 9vw;">Home</button>
+            <button class="button" id="hamburger_games" style="width: 9vw;">Games</button>
+            <button class="button" id="hamburger_help" style="width: 9vw;">Help</button>
+            <button class="button" id="hamburger_admin" style="width: 9vw;">Admin</button>
+
+          </div>
+        </div>
+        
+
+
         <div id="accountContainer">
-          <img src="images/account (1).png" id="accountIcon">
+          <img src="images/account (1).png" id="accountIcon" class="navbutton">
 
           <div id="accountDetails">
             <h3 style="text-align: center; font-size: 2vw; margin-top: 0;">My Account</h3>
@@ -74,40 +90,16 @@
             <p style="text-decoration: underline; text-align: center;">Username</p>
             <p id="accDet_user" class="highlightText">ezraa11232142351</p>
 
-            <button class="button" id="accDet_editUser">Edit Account Details</button>
-            <button class="button" id="accDet_viewScores">View Game Scores</button>
+            <button class="button" id="accDet_editUser" style="width: 13vw;">Edit Account Details</button>
+            <button class="button" id="accDet_viewScores" style="width: 13vw;">View Game Scores</button>
 
           </div>
         </div>
 
-        <img src="images/magnifying glass.png" id="searchIcon">
-
-        
-        
-      </div>
-
-      
-
-
-      
-
-      <!-- admin button -->
-      <!-- <div class="w3-container w3-grey w3-col m2">
-            <button id="lP_Admin" style="background-color: grey; width: 100%;"
-                    class="w3-button w3-border w3-margin" 
-                    onclick="ad_admin()">ADMIN
-            </button>
-          </div> -->
-      </div>
+        <img src="images/magnifying glass.png" id="searchIcon" class="navbutton">
     </header>
     <main>
-      <div class="w3-container">
-        <h1 class="w3-wide" id="helloHeader">hello</h1>
 
-        <!--game enter buttons-->
-        <button class="w3-button w3-border w3-xlarge" onclick="game_enterGame('PTB')">Pop Ball Game</button>
-        <button class="w3-button w3-border w3-xlarge" onclick="game_enterGame('TTT')">Tic Tac Toe</button>
-      </div>
       </div>
     </main>
   </section>

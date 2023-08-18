@@ -1,5 +1,24 @@
-
 .search-open {
-    transform: translate(-20vw, 0);
-  }
-  
+  transform: translate(-20vw, 0);
+}
+
+.button:hover {
+  box-shadow: #888888 1px 2px;
+  transition: all 0.3s ease;
+}
+
+.button:active {
+  box-shadow: none;
+  transform: translateY(1px);
+}
+
+.navbutton:hover {
+  box-shadow: #888888 2px 2px 2px 2px;
+  padding: 5px;
+  transition: all 0.3s ease;
+}
+
+.navbutton:active {
+  box-shadow: none;
+  transform: translateY(1px);
+}

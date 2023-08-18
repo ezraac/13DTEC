@@ -13,10 +13,11 @@ var HTML_isAdmin = false;
 function HTML_updateHTMLFromPerms() {
     console.log(permissions.userAuthRole)
     if (permissions.userAuthRole >= 2) {
-        document.getElementById("lP_Admin").style.display = "block";
+        document.getElementById("hamburger_admin").style.display = "block";
+        document.getElementById("hamburgerMenu").style.height = "23vw";
 		HTML_isAdmin = true;
     } else {
-    	document.getElementById("lP_Admin").remove();
+    	document.getElementById("hamburger_admin").remove();
       	document.getElementById("s_adminPage").remove();
 		window.ad_admin = null; //sets function to null
     }
@@ -84,7 +85,9 @@ function HTML_editGameInfo(game) {
 function HTML_loadPage() {
     document.getElementById("landingPage").style.display = "block";
     document.getElementById("loadingText_BG").style.display = "none";
-    document.getElementById("accountIcon").src = userDetails.photoURL
+    document.getElementById("accountIcon").src = userDetails.photoURL;
+    document.getElementById("accDet_name").innerHTML = userDetails.name;
+    document.getElementById("accDet_user").innerHTML = userGameData.gameName;
 }
 
 /*****************************************************/
@@ -95,9 +98,4 @@ function HTML_loadPage() {
 function HTML_returnPage() {
     document.getElementById("landingPage").style.display = "block";
     document.getElementById("gamePage").style.display = "none";
-}
-
-
-function hi() {
-    console.log("hi")
 }

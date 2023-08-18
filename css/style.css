@@ -69,16 +69,6 @@ canvas {
   display: block;
 }
 
-.button:hover {
-  box-shadow: #888888 1px 2px;
-  transition: all 0.3s ease;
-}
-
-.button:active {
-  box-shadow: none;
-  transform: translateY(1px);
-}
-
 /*------------------------------------------------------------*
   LANDING page styling
 /*------------------------------------------------------------*/
@@ -106,6 +96,7 @@ canvas {
   transform: translate(-50%, -50%);
 }
 
+/* nav bar css */
 #navigation {
   margin-left: 10vw;
   margin-right: 10vw;
@@ -123,6 +114,7 @@ canvas {
   border-radius: 50vw;
   grid-column: 1;
   margin: auto;
+  margin-left: 0;
 }
 
 #title {
@@ -131,26 +123,31 @@ canvas {
   font-size: 2vw;
 }
 
-#hamburgerIcon {
-  width: 3.5vw;
-  height: 3.5vw;
+/* hambuger container */
+#hamburgerContainer {
   grid-column: 14;
   grid-row: 1;
   margin: auto;
-  position: relative;
   transition: all 0.3s;
+}
+
+#hamburgerIcon {
+  width: 3.5vw;
+  height: 3.5vw;
+  margin: auto;
   border-radius: 50vw;
+  cursor: pointer;
 }
 
-#hamburgerIcon:hover {
-  box-shadow: #888888 2px 2px 2px 2px;
-  padding: 5px;
-  transition: all 0.3s ease;
-}
-
-#hamburgerIcon:active {
-  box-shadow: none;
-  transform: translateY(1px);
+#hamburgerMenu {
+  background-color: #92e8f3;
+  border-radius: 1vw;
+  padding: 1vh 1vw 1vh 1vw;
+  height: 19vw;
+  width: 11.5vw;
+  position: absolute;
+  margin: 3.5vh 0 0 -3.5vw;
+  transition: all 0.3s;
 }
 
 /* ACCOUNT ICON CSS */
@@ -166,19 +163,7 @@ canvas {
   height: 3.5vw;
   margin: auto;
   border-radius: 50vw;
-  border-width: 3px;
-  border-style: solid;
   cursor: pointer;
-}
-
-#accountIcon:hover {
-  box-shadow: #888888 2px 2px 2px 2px;
-  transition: all 0.3s ease;
-}
-
-#accountIcon:active {
-  box-shadow: none;
-  transform: translateY(1px);
 }
 
 #accountDetails {
@@ -192,8 +177,6 @@ canvas {
   transition: all 0.3s;
 }
 
-
-
 /* SEARCH ICON CSS*/
 #searchIcon {
   width: 3.5vw;
@@ -203,6 +186,12 @@ canvas {
   margin: auto;
   cursor: pointer;
   position: relative;
+  border-radius: 50vw;
+  overflow: visible;
+}
+
+#searchIcon:active {
+  padding: 10px !important;
 }
 
 #searchContainer {
@@ -223,6 +212,8 @@ canvas {
   padding-left: 2vw;
   background-repeat: no-repeat;
 }
+
+
 
 
 /*game page css*/
