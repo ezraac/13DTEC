@@ -1,0 +1,309 @@
+/*************************************************************
+  Written by ????, Term 1 2021
+  Style a basic W3.CSS interface.
+    v1 Basic layout of landing & game pages.
+*************************************************************/
+html {
+  margin: 0px;
+  padding: 0px;
+  font-family: tahoma;
+  color: black;
+}
+
+body {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main";
+}
+
+p {
+  color: #2b2b2b;
+  font-size: 1vw;
+}
+
+canvas {
+  display: block;
+}
+
+#landingPage {
+  display: none;
+  height: 100vh;
+}
+
+#gamePage {
+  display: none;
+  height: 100vh;
+}
+
+#helloHeader {
+  height: 15vh;
+}
+
+.container {
+  background-color: #61d6e6;
+  border-radius: 50vw;
+  padding: 1vh 1vw 1vh 1vw;
+}
+
+.subContainer {
+  background-color: #addfe6;
+  border-radius: 50vw;
+  padding: 1vh 1vw 1vh 1vw;
+}
+
+.highlightText {
+  background-color: #ffffff;
+  border-radius: 5vw;
+  padding: 1vh 1vw 1vh 1vw;
+  margin-top: -1vh;
+}
+
+.button {
+  font-size: 1vw;
+  background-color: #ffffff;
+  border-radius: 1vw;
+  border-style: none;
+  padding: 1vw 1vw 1vw 1vw;
+  margin: 1vw auto;
+  display: block;
+}
+
+/*------------------------------------------------------------*
+  LANDING page styling
+/*------------------------------------------------------------*/
+#landingPage header {
+  grid-area: header;
+}
+
+#landingPage main {
+  grid-area: main;
+}
+
+#loadingText {
+  font-size: 5vw;
+}
+
+#loadingText_BG {
+  background-color: #61d6e6;
+  border-radius: 50vw;
+  padding: 1vw;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+/* nav bar css */
+#navigation {
+  margin-left: 10vw;
+  margin-right: 10vw;
+  margin-top: 25px;
+
+  display: grid;
+  grid-template-columns: repeat(16, 5vw);
+  transition: all 0.3s;
+}
+
+#gameIcon {
+  background-color: white;
+  width: 3.5vw;
+  height: 3.5vw;
+  border-radius: 50vw;
+  grid-column: 1;
+  margin: auto;
+  margin-left: 0;
+}
+
+#title {
+  text-align: center;
+  grid-column: 7/10;
+  font-size: 2vw;
+}
+
+/* hambuger container */
+#hamburgerContainer {
+  grid-column: 14;
+  grid-row: 1;
+  margin: auto;
+  transition: all 0.3s;
+}
+
+#hamburgerIcon {
+  width: 3.5vw;
+  height: 3.5vw;
+  margin: auto;
+  border-radius: 50vw;
+  cursor: pointer;
+}
+
+#hamburgerMenu {
+  background-color: #92e8f3;
+  border-radius: 1vw;
+  padding: 1vh 1vw 1vh 1vw;
+  height: 19vw;
+  width: 11.5vw;
+  position: absolute;
+  margin: 3.5vh 0 0 -3.5vw;
+  transition: all 0.3s;
+}
+
+/* ACCOUNT ICON CSS */
+#accountContainer {
+  grid-column: 15;
+  grid-row: 1;
+  margin: auto;
+  transition: all 0.3s;
+}
+
+#accountIcon {
+  width: 3.5vw;
+  height: 3.5vw;
+  margin: auto;
+  border-radius: 50vw;
+  cursor: pointer;
+}
+
+#accountDetails {
+  background-color: #92e8f3;
+  border-radius: 1vw;
+  padding: 1vh 1vw 1vh 1vw;
+  height: 26vw;
+  width: 15vw;
+  position: absolute;
+  margin: 3.5vh 0 0 -5vw;
+  transition: all 0.3s;
+}
+
+/* SEARCH ICON CSS*/
+#searchIcon {
+  width: 3.5vw;
+  height: 3.5vw;
+  grid-column: 16;
+  grid-row: 1;
+  margin: auto;
+  cursor: pointer;
+  position: relative;
+  border-radius: 50vw;
+  overflow: visible;
+}
+
+#searchIcon:active {
+  padding: 10px !important;
+}
+
+#searchContainer {
+  width: 20vw;
+  grid-column: 12;
+  grid-row: 1;
+  margin: auto;
+  box-shadow: #2b2b2b 2px 1px 2px 1px;
+}
+
+#search {
+  width: 18vw;
+  border-radius: 50vw;
+  border: none;
+  background-image: url(images/magnifying\ glass.png);
+  background-size: 1vw;
+  background-position: 5px;
+  padding-left: 2vw;
+  background-repeat: no-repeat;
+}
+
+
+
+
+/*game page css*/
+#game_oneThird {
+  height: 80vh;
+  border-radius: 20px 0px 0px 20px;
+  background-color: rgb(51, 51, 51);
+}
+
+#game_twoThird {
+  height: 80vh;
+  border-radius: 0px 20px 20px 0px;
+  position: relative;
+  background-color: rgb(51, 51, 51);
+}
+
+#game_canvasDiv {
+  height: 70vh;
+  width: 60vw;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+/*text div css*/
+#game_textDiv {
+  background-color: rgb(92, 92, 92);
+  border-radius: 20px;
+  font-size: larger;
+  width: 30vw;
+  height: 65vh;
+}
+
+#game_timeDiv {
+  background-color: rgb(24, 230, 72);
+  border-radius: 20px;
+  width: 10vw;
+}
+
+#game_startButton {
+  margin-top: 20px;
+  background-color: rgb(24, 230, 72);
+  color: white;
+  border-radius: 20px;
+}
+
+#game_loginButton {
+  margin-top: 20px;
+  background-color: rgb(24, 230, 72);
+  color: white;
+  border-radius: 20px;
+}
+
+/*------------------------------------------------------------*
+  REGISTRATION page styling
+/*------------------------------------------------------------*/
+#registrationPage {
+  display: none;
+  /* The line below is just so you can see the form during testing //<========*/
+  /*display: block;*/
+  /* <===== ONCE FORM IS DESIGNED DELETE THIS LINE //<========*/
+  height: 86vh;
+}
+
+.transparentBG {
+  background: rgba(169, 169, 169, 0.7);
+  color: black;
+}
+
+/*------------------------------------------------------------*
+  ADMIN page & BUTTON styling
+/*------------------------------------------------------------*/
+#s_adminPage {
+  display: none;
+  height: 86vh;
+  overflow: scroll;
+}
+
+#lP_Admin {
+  display: none;
+  /* none = don't display element */
+}
+
+#b_gpAdmin {
+  display: none;
+  /* none = don't display element */
+}
+
+/*************************************************************
+/*    END OF CSS
+*************************************************************/
