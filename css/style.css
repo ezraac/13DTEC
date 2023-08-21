@@ -69,6 +69,9 @@ canvas {
   display: block;
 }
 
+.card {
+  
+}
 /*------------------------------------------------------------*
   LANDING page styling
 /*------------------------------------------------------------*/
@@ -229,6 +232,22 @@ canvas {
   height: 25vw;
   transform: translate(50%, 35%);
 }
+
+
+#cardsContainer {
+  width: 75%;
+  height: 25vw;
+  background-color: #61d6e6;
+  margin: 5vh auto;
+  border-radius: 1vw;
+}
+
+
+
+
+
+
+
 
 /*game page css*/
 #game_oneThird {
