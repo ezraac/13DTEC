@@ -70,7 +70,12 @@ canvas {
 }
 
 .card {
-  
+  width: 75%;
+  height: 75%;
+  background-color: white;
+  display: inline-block;
+  border-radius: 1vw;
+  margin: auto;
 }
 /*------------------------------------------------------------*
   LANDING page styling
@@ -224,15 +229,21 @@ canvas {
   height: 35vw;
   opacity: 9%;
   background-color: #61d6e6;
-  z-index: 9;
+  z-index: 8;
 }
 
 #heroImage {
   width: 50vw;
   height: 25vw;
   transform: translate(50%, 35%);
+  opacity: 100% !important;
 }
 
+#exploreButton {
+  position: relative;
+  background-color: #92e8f3;
+  color: black;
+}
 
 #cardsContainer {
   width: 75%;
@@ -240,10 +251,9 @@ canvas {
   background-color: #61d6e6;
   margin: 5vh auto;
   border-radius: 1vw;
+  display: grid;
+  grid-template-columns: repeat(3, 33.3333%);
 }
-
-
-
 
 
 
