@@ -52,3 +52,17 @@ $(document).ready(function () {
         }
     })
 });
+
+window.onscroll = function() {stickToTop()};
+
+var navbar = document.getElementById("navigation")
+
+var sticky = navbar.offsetTop + 25;
+
+function stickToTop() {
+    if (window.scrollY >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+}

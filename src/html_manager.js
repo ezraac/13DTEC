@@ -84,6 +84,7 @@ function HTML_editGameInfo(game) {
 /*****************************************************/
 function HTML_loadPage() {
     document.getElementById("landingPage").style.display = "block";
+    document.getElementById("navigation").style.display = "grid";
     document.getElementById("loadingText_BG").style.display = "none";
     document.getElementById("accountIcon").src = userDetails.photoURL;
     document.getElementById("accDet_name").innerHTML = userDetails.name;
@@ -98,4 +99,15 @@ function HTML_loadPage() {
 function HTML_returnPage() {
     document.getElementById("landingPage").style.display = "block";
     document.getElementById("gamePage").style.display = "none";
+}
+
+
+function HTML_changeTheme(theme) {
+    switch(theme) {
+        case "dark":
+            $(".container").css("background-color", "#959595");
+            $(".button").css("background-color", "#2b2b2b");
+            $("p").css("color", "#ffffff")
+            break;
+    }
 }

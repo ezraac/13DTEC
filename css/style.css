@@ -46,12 +46,6 @@ canvas {
   padding: 1vh 1vw 1vh 1vw;
 }
 
-.subContainer {
-  background-color: #addfe6;
-  border-radius: 50vw;
-  padding: 1vh 1vw 1vh 1vw;
-}
-
 .highlightText {
   background-color: #ffffff;
   border-radius: 5vw;
@@ -59,9 +53,19 @@ canvas {
   margin-top: -1vh;
 }
 
-.button {
+.menu-button {
   font-size: 1vw;
   background-color: #ffffff;
+  border-radius: 1vw;
+  border-style: none;
+  padding: 1vw 1vw 1vw 1vw;
+  margin: 1vw auto;
+  display: block;
+}
+
+.button {
+  font-size: 1vw;
+  background-color: #92e8f3;
   border-radius: 1vw;
   border-style: none;
   padding: 1vw 1vw 1vw 1vw;
@@ -108,7 +112,7 @@ canvas {
 #navigation {
   margin-left: 10vw;
   margin-right: 10vw;
-  margin-top: 25px;
+  top: 25px;
 
   display: grid;
   grid-template-columns: repeat(16, 5vw);
@@ -227,8 +231,7 @@ canvas {
 #hI_background {
   width: 100%;
   height: 35vw;
-  opacity: 9%;
-  background-color: #61d6e6;
+  background-color: #effdff;
   z-index: 8;
 }
 
@@ -255,22 +258,35 @@ canvas {
   grid-template-columns: repeat(3, 33.3333%);
 }
 
+#footer {
+  height: 10vw;
+  background-color: #61d6e6;
+  
+}
+
 
 
 
 
 /*game page css*/
-#game_oneThird {
-  height: 80vh;
-  border-radius: 20px 0px 0px 20px;
-  background-color: rgb(51, 51, 51);
+#statsDiv {
+  position: absolute;
+  height: 70vh;
+  width: 15vw;
+  background-color: #61d6e6;
+  border-radius: 1vw;
+  margin-top: 20vh;
+  margin-left: 10vw;
 }
 
-#game_twoThird {
-  height: 80vh;
-  border-radius: 0px 20px 20px 0px;
-  position: relative;
-  background-color: rgb(51, 51, 51);
+#gameDiv {
+  height: 70vh;
+  width: 61vw;
+  background-color: #61d6e6;
+  border-radius: 1vw;
+  margin-top: 20vh;
+  margin-right: 10vw;
+  float: right;
 }
 
 #game_canvasDiv {

@@ -14,11 +14,11 @@ function game_enterGame(chosenGame) {
 	document.getElementById('landingPage').style.display = "none";
 	document.getElementById('gamePage').style.display = "block";
 
-	let element = document.getElementById("game_canvasDiv");
-	resizeCanvas(element.offsetWidth, element.offsetHeight);
+	//let element = document.getElementById("game_canvasDiv");
+	//resizeCanvas(element.offsetWidth, element.offsetHeight);
     whatGame = chosenGame;
 
-	HTML_editGameInfo(chosenGame);
+	//HTML_editGameInfo(chosenGame);
 }
 
 
@@ -29,10 +29,10 @@ default function called automatically by p5.js
 creates a canvas and sets the parent to div "game_canvasDiv" and positions it over that same div.
 */
 function setup() {
-	let element = document.getElementById("game_canvasDiv")
-	cnv = createCanvas(element.offsetWidth, element.offsetHeight); //sets width and height to same as div
-	cnv.parent("game_canvasDiv");
-	cnv.position(element.offsetLeft, element.offsetTop);
+	// let element = document.getElementById("game_canvasDiv")
+	// cnv = createCanvas(element.offsetWidth, element.offsetHeight); //sets width and height to same as div
+	// cnv.parent("game_canvasDiv");
+	// cnv.position(element.offsetLeft, element.offsetTop);
 
 	//initialise firebase
 	//attempts login to google
