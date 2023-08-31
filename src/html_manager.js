@@ -55,24 +55,24 @@ function HTML_updateAdminPage(page) {
 // updates user info on side of game page
 /*****************************************************/
 function HTML_editGameInfo(game) {
-    document.getElementById("username").innerHTML = `Username: ${userGameData.gameName}`;
-    document.getElementById("hellouser").innerHTML = `Hello ${userDetails.name}`
+   // document.getElementById("username").innerHTML = `Username: ${userGameData.gameName}`;
+    //document.getElementById("hellouser").innerHTML = `Hello ${userDetails.name}`
 
 	//ptb details
     if (game == "PTB") {
 		document.getElementById("highavgscore").style.display = "block"
-        document.getElementById("misses").innerHTML = "Misses: 0";
-        document.getElementById("hitscore").innerHTML = "Average Hit Score: 0";
-        document.getElementById("highavgscore").innerHTML = `Highest AHS: ${userGameData.PTB_avgScore}`;
-        document.getElementById("highscore").innerHTML = `Fastest Time: ${userGameData.PTB_timeRec}s`;
+        document.getElementById("misses").innerHTML = "0";
+        document.getElementById("hitscore").innerHTML = "0";
+        document.getElementById("highavgscore").innerHTML = `${userGameData.PTB_avgScore}`;
+        document.getElementById("highscore").innerHTML = `${userGameData.PTB_timeRec}s`;
         document.getElementById("game_timeDiv").style.display = "block";
 
 	//tic tac toe details	
     } else if (game == "TTT") {
 		document.getElementById("highavgscore").style.display = "none"
-        document.getElementById("hitscore").innerHTML = `Wins: ${userGameData.TTT_Wins}`;
-        document.getElementById("highscore").innerHTML = `Losses: ${userGameData.TTT_Losses}`;
-        document.getElementById("misses").innerHTML = "";
+        document.getElementById("hitscore").innerHTML = `${userGameData.TTT_Wins}`;
+        document.getElementById("highscore").innerHTML = `${userGameData.TTT_Losses}`;
+        document.getElementById("misses").innerHTML = "0";
         document.getElementById("game_timeDiv").style.display = "none";
     }
 }

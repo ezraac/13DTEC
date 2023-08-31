@@ -24,6 +24,7 @@ p {
 
 canvas {
   display: block;
+  border-radius: 1vw;
 }
 
 #landingPage {
@@ -111,7 +112,6 @@ canvas {
 /* nav bar css */
 #navigation {
   margin-left: 10vw;
-  margin-right: 10vw;
   top: 25px;
 
   display: grid;
@@ -271,61 +271,46 @@ canvas {
 /*game page css*/
 #statsDiv {
   position: absolute;
-  height: 70vh;
+  height: 77.5vh;
   width: 15vw;
   background-color: #61d6e6;
   border-radius: 1vw;
   margin-top: 20vh;
   margin-left: 10vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
 }
 
 #gameDiv {
-  height: 70vh;
-  width: 61vw;
+  height: 77.5vh;
+  width: 62vw;
   background-color: #61d6e6;
   border-radius: 1vw;
   margin-top: 20vh;
-  margin-right: 10vw;
-  float: right;
+  margin-left: 30vw;
+  position: relative;
 }
 
 #game_canvasDiv {
-  height: 70vh;
-  width: 60vw;
   position: absolute;
+  height: 72.5vh;
+  width: 58vw;
   left: 50%;
   top: 50%;
 
   transform: translate(-50%, -50%);
+
 }
 
 /*text div css*/
 #game_textDiv {
-  background-color: rgb(92, 92, 92);
+  background-color: #92e8f3;
   border-radius: 20px;
   font-size: larger;
-  width: 30vw;
-  height: 65vh;
-}
-
-#game_timeDiv {
-  background-color: rgb(24, 230, 72);
-  border-radius: 20px;
-  width: 10vw;
-}
-
-#game_startButton {
-  margin-top: 20px;
-  background-color: rgb(24, 230, 72);
-  color: white;
-  border-radius: 20px;
-}
-
-#game_loginButton {
-  margin-top: 20px;
-  background-color: rgb(24, 230, 72);
-  color: white;
-  border-radius: 20px;
+  width: 12.5vw;
+  height: 23vw;
+  padding: 0.5vw;
+  margin: auto;
 }
 
 /*------------------------------------------------------------*

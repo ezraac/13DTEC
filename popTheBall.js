@@ -96,24 +96,24 @@ function PTB_MouseFunc() {
 				if (ballarray.length == 0) {
 					let PTB_fullTime = parseFloat(`${PTB_time}.${PTB_ms}`); //makes seconds and ms into a float
 					PTB_AHS = PTB_calcScore(PTB_fullTime, PTB_misses);
-					document.getElementById("hitscore").innerHTML = "Average Hit Score: " + PTB_AHS;
+					document.getElementById("hitscore").innerHTML = PTB_AHS;
 
 					//checking avghitscore and replacing if higher than int in data
 					if (PTB_AHS > userGameData.PTB_avgScore) {
 						userGameData.PTB_avgScore = PTB_AHS;
-						document.getElementById("highavgscore").innerHTML = `Highest AHS: ${PTB_AHS}`;
+						document.getElementById("highavgscore").innerHTML = PTB_AHS;
 						fb_writeRec(GAMEPATH, userDetails.uid, userGameData);
 					}
 
 					
 					if (PTB_fullTime < userGameData.PTB_timeRec || userGameData.PTB_timeRec == 0) {
 						userGameData.PTB_timeRec = PTB_fullTime;
-						document.getElementById("highscore").innerHTML = `Fastest Time: ${userGameData.PTB_timeRec}s`
+						document.getElementById("highscore").innerHTML = `${userGameData.PTB_timeRec}s`
 						fb_writeRec(GAMEPATH, userDetails.uid, userGameData);
 					}
 
 					clearInterval(pBInterval); //stops timer
-					document.getElementById("game_startButton").style.backgroundColor = "rgb(24, 230, 72)";
+					document.getElementById("game_startButton").style.backgroundColor = "#ffffff";
 					document.getElementById("game_startButton").innerHTML = "START"; //changes button to start button
 					buttonfunc = "start";
 					misses = 0;

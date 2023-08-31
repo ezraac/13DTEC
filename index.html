@@ -51,7 +51,7 @@
   <header>
     <div id="navigation" class="container" style="display: none;">
       <img src="images/game icon.png" id="gameIcon">
-      <p id="breadcrumb" style="font-size: 1rem; text-align: center; margin: auto;">Home</p>
+      <a id="breadcrumb" style="font-size: 1rem; text-align: center; margin: auto;">Home</a>
 
       <h3 id="title">arcade-o</h3>
 
@@ -99,7 +99,7 @@
   ****************************************************-->
   <section id="landingPage" style="position: absolute;">
 
-    
+
     <main>
       <div id="hI_background">
         <img src="images/filler image.png" id="heroImage">
@@ -145,15 +145,32 @@
   //  gamePage
   ****************************************************-->
   <section id="gamePage">
-    
-    <div id="statsDiv">
 
+    <div id="statsDiv">
+      <h3 id="gameTitle" style="text-align: center;">POP THE BALL</h3>
+
+      <div id="game_textDiv">
+        <p style="text-decoration: underline; text-align: center;">Average Hit Score</p>
+        <p class="highlightText" id="hitscore">0</p>
+
+        <p style="text-decoration: underline; text-align: center;">Highest AHS</p>
+        <p class="highlightText" id="highavgscore">0</p>
+
+        <p style="text-decoration: underline; text-align: center;">Fastest Time</p>
+        <p class="highlightText" id="highscore">0</p>
+
+        <p id="misses">Misses: 0</p>
+        <p class="highlightText" id=gameTimer>Time: 0s</p>
+      </div>
+
+      <button class="menu-button" onclick="game_gameStart()" style="width: 90%;" id="game_startButton">START</button>
+      <button class="menu-button" onclick="HTML_returnPage()" style="width: 90%;">RETURN</button>
     </div>
 
     <div id="gameDiv">
-
+      <div id="game_canvasDiv"></div>
     </div>
-    
+
 
     <!-- <div class="w3-container">
       <h1 class="w3-wide">Pop the Ball</h1>

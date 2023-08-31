@@ -14,11 +14,11 @@ function game_enterGame(chosenGame) {
 	document.getElementById('landingPage').style.display = "none";
 	document.getElementById('gamePage').style.display = "block";
 
-	//let element = document.getElementById("game_canvasDiv");
-	//resizeCanvas(element.offsetWidth, element.offsetHeight);
+	let element = document.getElementById("game_canvasDiv");
+	resizeCanvas(element.offsetWidth, element.offsetHeight);
     whatGame = chosenGame;
 
-	//HTML_editGameInfo(chosenGame);
+	HTML_editGameInfo(chosenGame);
 }
 
 
@@ -29,10 +29,10 @@ default function called automatically by p5.js
 creates a canvas and sets the parent to div "game_canvasDiv" and positions it over that same div.
 */
 function setup() {
-	// let element = document.getElementById("game_canvasDiv")
-	// cnv = createCanvas(element.offsetWidth, element.offsetHeight); //sets width and height to same as div
-	// cnv.parent("game_canvasDiv");
-	// cnv.position(element.offsetLeft, element.offsetTop);
+	let element = document.getElementById("game_canvasDiv")
+	cnv = createCanvas(element.offsetWidth, element.offsetHeight); //sets width and height to same as div
+	cnv.parent("game_canvasDiv");
+	cnv.position(element.offsetLeft, element.offsetTop);
 
 	//initialise firebase
 	//attempts login to google
@@ -81,14 +81,14 @@ function game_gameStart() {
 				cnv.mousePressed(PTB_MouseFunc) //mouse pressed over canvas func
                 PTB_balls() //creates balls called in popball.js
                 pBInterval = setInterval(game_nextMs, 100); //starts timer
-				document.getElementById("hitscore").innerHTML = "Average Hit Score: 0"
+				document.getElementById("hitscore").innerHTML = "0"
             }
 		}
 	} else {
 		started = false
 		if (buttonfunc == "stop") {
             if (whatGame == "PTB") {
-				document.getElementById("game_startButton").style.backgroundColor = "rgb(24, 230, 72)";
+				document.getElementById("game_startButton").style.backgroundColor = "#ffffff";
 				document.getElementById("game_startButton").innerHTML = "START"; //changes button to start button
 				buttonfunc = "start";
                 ballarray.splice(0, ballarray.length); //removes all balls in object
