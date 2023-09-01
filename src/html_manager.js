@@ -99,3 +99,32 @@ function HTML_returnPage() {
     document.getElementById("landingPage").style.display = "block";
     document.getElementById("gamePage").style.display = "none";
 }
+<<<<<<< Updated upstream
+=======
+
+
+function HTML_changeTheme(theme) {
+    switch(theme) {
+        case "dark":
+            $(".container").css("background-color", "#959595");
+            $(".button").css("background-color", "#2b2b2b");
+            $("p").css("color", "#ffffff")
+            break;
+    }
+}
+
+function HTML_scrollGames()  {
+    let cards = document.getElementById("cardsContainer");
+    cards.scrollIntoView({behavior: "smooth", block: "center"})
+}
+
+function HTML_gameNA() {
+    $("#nA_modal").toggleClass("modal-open");
+    document.getElementById("modal_background").style.top = "0"
+}
+
+function HTML_closeModal() {
+    $("#nA_modal").toggleClass("modal-open");
+    document.getElementById("modal_background").style.top = "-100%";
+}
+>>>>>>> Stashed changes
