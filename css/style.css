@@ -24,6 +24,7 @@ p {
 
 canvas {
   display: block;
+  border-radius: 1vw;
 }
 
 #landingPage {
@@ -46,12 +47,6 @@ canvas {
   padding: 1vh 1vw 1vh 1vw;
 }
 
-.subContainer {
-  background-color: #addfe6;
-  border-radius: 50vw;
-  padding: 1vh 1vw 1vh 1vw;
-}
-
 .highlightText {
   background-color: #ffffff;
   border-radius: 5vw;
@@ -59,9 +54,19 @@ canvas {
   margin-top: -1vh;
 }
 
-.button {
+.menu-button {
   font-size: 1vw;
   background-color: #ffffff;
+  border-radius: 1vw;
+  border-style: none;
+  padding: 1vw 1vw 1vw 1vw;
+  margin: 1vw auto;
+  display: block;
+}
+
+.button {
+  font-size: 1vw;
+  background-color: #92e8f3;
   border-radius: 1vw;
   border-style: none;
   padding: 1vw 1vw 1vw 1vw;
@@ -107,14 +112,13 @@ canvas {
 /* nav bar css */
 #navigation {
   margin-left: 10vw;
-  margin-right: 10vw;
-  margin-top: 25px;
+  top: 25px;
 
   display: grid;
   grid-template-columns: repeat(16, 5vw);
   transition: all 0.3s;
   position: absolute;
-  z-index: 10;
+  z-index: 2;
 }
 
 #gameIcon {
@@ -227,9 +231,8 @@ canvas {
 #hI_background {
   width: 100%;
   height: 35vw;
-  opacity: 9%;
-  background-color: #61d6e6;
-  z-index: 8;
+  background-color: #effdff;
+  z-index: 1;
 }
 
 #heroImage {
@@ -245,6 +248,27 @@ canvas {
   color: black;
 }
 
+#modal_background {
+  position: fixed;
+  z-index: 3;
+  left: 0;
+  top: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+#nA_modal {
+  transition: all 0.3s;
+  margin: -8.5vw auto;
+  height: 7.5vw;
+  width: 20vw;
+  border-radius: 1vw;
+  z-index: 1;
+  background-color: #61d6e6;
+}
+
 #cardsContainer {
   width: 75%;
   height: 25vw;
@@ -255,61 +279,59 @@ canvas {
   grid-template-columns: repeat(3, 33.3333%);
 }
 
+#footer {
+  height: 10vw;
+  background-color: #61d6e6;
+  
+}
+
 
 
 
 
 /*game page css*/
-#game_oneThird {
-  height: 80vh;
-  border-radius: 20px 0px 0px 20px;
-  background-color: rgb(51, 51, 51);
+#statsDiv {
+  position: absolute;
+  height: 77.5vh;
+  width: 15vw;
+  background-color: #61d6e6;
+  border-radius: 1vw;
+  margin-top: 20vh;
+  margin-left: 10vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
 }
 
-#game_twoThird {
-  height: 80vh;
-  border-radius: 0px 20px 20px 0px;
+#gameDiv {
+  height: 77.5vh;
+  width: 62vw;
+  background-color: #61d6e6;
+  border-radius: 1vw;
+  margin-top: 20vh;
+  margin-left: 30vw;
   position: relative;
-  background-color: rgb(51, 51, 51);
 }
 
 #game_canvasDiv {
-  height: 70vh;
-  width: 60vw;
   position: absolute;
+  height: 72.5vh;
+  width: 58vw;
   left: 50%;
   top: 50%;
 
   transform: translate(-50%, -50%);
+
 }
 
 /*text div css*/
 #game_textDiv {
-  background-color: rgb(92, 92, 92);
+  background-color: #92e8f3;
   border-radius: 20px;
   font-size: larger;
-  width: 30vw;
-  height: 65vh;
-}
-
-#game_timeDiv {
-  background-color: rgb(24, 230, 72);
-  border-radius: 20px;
-  width: 10vw;
-}
-
-#game_startButton {
-  margin-top: 20px;
-  background-color: rgb(24, 230, 72);
-  color: white;
-  border-radius: 20px;
-}
-
-#game_loginButton {
-  margin-top: 20px;
-  background-color: rgb(24, 230, 72);
-  color: white;
-  border-radius: 20px;
+  width: 12.5vw;
+  height: 23vw;
+  padding: 0.5vw;
+  margin: auto;
 }
 
 /*------------------------------------------------------------*
