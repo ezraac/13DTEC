@@ -82,6 +82,12 @@ canvas {
   border-radius: 1vw;
   margin: auto;
 }
+
+.modal {
+  border-radius: 1vw;
+  z-index: 1;
+  background-color: #61d6e6;
+}
 /*------------------------------------------------------------*
   LANDING page styling
 /*------------------------------------------------------------*/
@@ -264,9 +270,13 @@ canvas {
   margin: -8.5vw auto;
   height: 7.5vw;
   width: 20vw;
-  border-radius: 1vw;
-  z-index: 1;
-  background-color: #61d6e6;
+}
+
+#accountDet_modal {
+  width: 60vw;
+  height: 70%;
+  margin: auto;
+  transition: all 0.3s;
 }
 
 #cardsContainer {

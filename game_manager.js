@@ -81,14 +81,14 @@ function game_gameStart() {
 				cnv.mousePressed(PTB_MouseFunc) //mouse pressed over canvas func
                 PTB_balls() //creates balls called in popball.js
                 pBInterval = setInterval(game_nextMs, 100); //starts timer
-				document.getElementById("hitscore").innerHTML = "Average Hit Score: 0"
+				document.getElementById("hitscore").innerHTML = "0"
             }
 		}
 	} else {
 		started = false
 		if (buttonfunc == "stop") {
             if (whatGame == "PTB") {
-				document.getElementById("game_startButton").style.backgroundColor = "rgb(24, 230, 72)";
+				document.getElementById("game_startButton").style.backgroundColor = "white";
 				document.getElementById("game_startButton").innerHTML = "START"; //changes button to start button
 				buttonfunc = "start";
                 ballarray.splice(0, ballarray.length); //removes all balls in object

@@ -119,10 +119,17 @@ function HTML_scrollGames()  {
 
 function HTML_gameNA() {
     $("#nA_modal").toggleClass("modal-open");
-    document.getElementById("modal_background").style.top = "0"
+    document.getElementById("modal_background").style.top = "0";
 }
 
-function HTML_closeModal() {
-    $("#nA_modal").toggleClass("modal-open");
+function HTML_closeModal(modal) {
+    $(`#${modal}_modal`).toggleClass("modal-open");
     document.getElementById("modal_background").style.top = "-100%";
 }
+
+window.onclick = function(event) {
+    modal = document.getElementById("modal_background")
+    if (event.target == modal) {
+      HTML_closeModal("nA");
+    }
+  }
