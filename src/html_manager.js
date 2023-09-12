@@ -117,19 +117,39 @@ function HTML_scrollGames()  {
     cards.scrollIntoView({behavior: "smooth", block: "center"})
 }
 
-function HTML_gameNA() {
-    $("#nA_modal").toggleClass("modal-open");
+function HTML_navScroll() {
+    let navbar = document.getElementById("navigation");
+    
+    if (window.scrollY >= 25) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+}
+window.onscroll = function() {HTML_navScroll()};
+
+function HTML_openModal(modal) {
+    switch(modal) {
+        case "nA":
+            $("#nA_modal").toggleClass("nA-open");
+            break;
+        case "accountDet":
+            $("#accountDet_modal").toggleClass("account-open");
+            break;
+    }
+   
     document.getElementById("modal_background").style.top = "0";
 }
 
 function HTML_closeModal(modal) {
-    $(`#${modal}_modal`).toggleClass("modal-open");
+    switch(modal) {
+        case "nA":
+            $("#nA_modal").toggleClass("nA-open");
+            break;
+        
+        case "accountDet":
+            $("#accountDet_modal").toggleClass("account-open");
+            break;
+    }
     document.getElementById("modal_background").style.top = "-100%";
 }
-
-window.onclick = function(event) {
-    modal = document.getElementById("modal_background")
-    if (event.target == modal) {
-      HTML_closeModal("nA");
-    }
-  }

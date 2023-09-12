@@ -49,15 +49,18 @@
   </div>
 
   <div id="modal_background">
-    <div id="nA_modal" class="modal">
-      <span class="close" onclick="HTML_closeModal('nA')">&times;</span>
+    <div id="nA_modal">
+      <div style="float: right;">
+        <a class="close" onclick="HTML_closeModal('nA')">×</a>
+      </div>
+      
       <h3 style="text-align: center;">Sorry!</h3>
       <p style="text-align: center;">Game isn't available currently.</p>
     </div>
     
-    <!-- <div id="accountDet_modal" class="modal">
-      <span class="close" onclick="HTML_closeModal('accountDet')">&times;</span>
-    </div> -->
+    <div id="accountDet_modal">
+      <a class="close" onclick="HTML_closeModal('accountDet')" style="position: absolute; right: 0;">×</a>
+    </div>
   </div>
 
   <header>
@@ -98,7 +101,7 @@
           <p style="text-decoration: underline; text-align: center;">Username</p>
           <p id="accDet_user" class="highlightText">ezraa11232142351</p>
 
-          <button class="menu-button" id="accDet_editUser" style="width: 13vw;">Edit Account Details</button>
+          <button class="menu-button" id="accDet_editUser" style="width: 13vw;" onclick="HTML_openModal('accountDet')">Edit Account Details</button>
           <button class="menu-button" id="accDet_viewScores" style="width: 13vw;">View Game Scores</button>
 
         </div>
@@ -132,7 +135,7 @@
           <p style="text-align: center; font-size: 1vw;">Classic Tic Tac Toe! Try get a row of X or O depending on which
             one you are to win!</p>
 
-          <button class="button" onclick="HTML_gameNA()">Play!</button>
+          <button class="button" onclick="HTML_openModal('nA')">Play!</button>
         </div>
 
         <div id="card3" class="card">
@@ -140,7 +143,7 @@
           <p style="text-align: center; font-size: 1vw;">A game where you and your opponent take turns guessing your
             randomly generated number!</p>
 
-          <button class="button" onclick="HTML_gameNA()">Play!</button>
+          <button class="button" onclick="HTML_openModal('nA')">Play!</button>
         </div>
       </div>
       </div>

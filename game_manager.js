@@ -88,7 +88,7 @@ function game_gameStart() {
 		started = false
 		if (buttonfunc == "stop") {
             if (whatGame == "PTB") {
-				document.getElementById("game_startButton").style.backgroundColor = "white";
+				document.getElementById("game_startButton").style.backgroundColor = "#ffffff";
 				document.getElementById("game_startButton").innerHTML = "START"; //changes button to start button
 				buttonfunc = "start";
                 ballarray.splice(0, ballarray.length); //removes all balls in object

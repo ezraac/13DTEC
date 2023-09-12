@@ -84,9 +84,8 @@ canvas {
 }
 
 .modal {
-  border-radius: 1vw;
-  z-index: 1;
-  background-color: #61d6e6;
+
+  max-width: 60vw;
 }
 /*------------------------------------------------------------*
   LANDING page styling
@@ -261,7 +260,7 @@ canvas {
   top: -100%;
   width: 100%;
   height: 100%;
-  background-color: rgb(0,0,0);
+  background-color: rgxb(0,0,0);
   background-color: rgba(0,0,0,0.4);
 }
 
@@ -269,14 +268,21 @@ canvas {
   transition: all 0.3s;
   margin: -8.5vw auto;
   height: 7.5vw;
-  width: 20vw;
+  width: 60vw;
+  border-radius: 1vw;
+  z-index: 1;
+  background-color: #61d6e6;
 }
 
 #accountDet_modal {
   width: 60vw;
-  height: 70%;
-  margin: auto;
+  height: 40vw;
+  margin: -40vw auto;
   transition: all 0.3s;
+  border-radius: 1vw;
+  position: relative;
+  z-index: 1;
+  background-color: #61d6e6;
 }
 
 #cardsContainer {

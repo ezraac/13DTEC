@@ -23,8 +23,12 @@
   transform: translateY(1px);
 }
 
-.modal-open {
+.nA-open {
   transform: translate(0, 8.5vw);
+}
+
+.account-open {
+  transform: translate(0, 42.5vw);
 }
 
 .sticky {
@@ -34,11 +38,11 @@
   border-radius: 0px 0px 1vw 1vw;
 }
 
-.close {
+.close{
   color: #aaa;
-  float: right;
   font-size: 28px;
   font-weight: bold;
+  padding: 0.5vw;
 }
 
 .close:hover,
