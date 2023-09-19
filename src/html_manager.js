@@ -153,3 +153,19 @@ function HTML_closeModal(modal) {
     }
     document.getElementById("modal_background").style.top = "-100%";
 }
+
+var whatFunction = "change"
+function HTML_changeUsername() {
+    if (whatFunction == "change") {
+        document.getElementById("accDet_user").removeAttribute("disabled");
+        document.getElementById("accDet_user").focus();
+        document.getElementById("accDet_editUser").innerHTML = "Confirm Username";
+        whatFunction = "confirm"
+    } else if (whatFunction == "confirm") {
+        document.getElementById("accDet_user").setAttribute("disabled", true);
+        document.getElementById("accDet_editUser").innerHTML = "Edit Username";
+        whatFunction = "change";
+        userGameData.gameName = document.getElementById("accDet_user").value;
+        fb_writeRec(GAMEPATH, userDetails.uid, userGameData)
+    }
+}

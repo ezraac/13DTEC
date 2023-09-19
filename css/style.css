@@ -277,12 +277,13 @@ canvas {
 #accountDet_modal {
   width: 60vw;
   height: 40vw;
-  margin: -40vw auto;
+  margin: -41vw auto;
   transition: all 0.3s;
   border-radius: 1vw;
   position: relative;
   z-index: 1;
   background-color: #61d6e6;
+  padding: 1vw;
 }
 
 #cardsContainer {

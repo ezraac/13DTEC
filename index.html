@@ -51,16 +51,22 @@
   <div id="modal_background">
     <div id="nA_modal">
       <div style="float: right;">
-        <a class="close" onclick="HTML_closeModal('nA')">×</a>
+        <a class="close" onclick="HTML_closeModal('nA')">&times;</a>
       </div>
       
       <h3 style="text-align: center;">Sorry!</h3>
       <p style="text-align: center;">Game isn't available currently.</p>
     </div>
     
-    <div id="accountDet_modal">
-      <a class="close" onclick="HTML_closeModal('accountDet')" style="position: absolute; right: 0;">×</a>
-    </div>
+    <!-- <div id="accountDet_modal">
+      <a class="close" onclick="HTML_closeModal('accountDet')" style="position: absolute; right: 0;">&times;</a>
+      <h3 style="text-align: center;">My Account Details</h3>
+
+      <label for="name">Name</label><br></br>
+      <input class="highlightText" type="text" value="ezra" name="name">
+      <label for="username">Username</label><br></br>
+      <input type="submit" hidden>
+    </div> -->
   </div>
 
   <header>
@@ -99,9 +105,9 @@
           <p id="accDet_name" class="highlightText">Ezra Chai</p>
 
           <p style="text-decoration: underline; text-align: center;">Username</p>
-          <p id="accDet_user" class="highlightText">ezraa11232142351</p>
+          <input style="font-size: 1vw; width: 100%; border: none;" id="accDet_user" class="highlightText" value="ezra" disabled>
 
-          <button class="menu-button" id="accDet_editUser" style="width: 13vw;" onclick="HTML_openModal('accountDet')">Edit Account Details</button>
+          <button class="menu-button" id="accDet_editUser" style="width: 13vw;" onclick="HTML_changeUsername()">Edit Username</button>
           <button class="menu-button" id="accDet_viewScores" style="width: 13vw;">View Game Scores</button>
 
         </div>
