@@ -17,6 +17,7 @@ function game_enterGame(chosenGame) {
 	let element = document.getElementById("game_canvasDiv");
 	resizeCanvas(element.offsetWidth, element.offsetHeight);
     whatGame = chosenGame;
+	document.getElementById("breadcrumb").innerHTML = `Home // ${chosenGame}`;
 
 	HTML_editGameInfo(chosenGame);
 }

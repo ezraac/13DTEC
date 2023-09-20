@@ -88,7 +88,7 @@ function HTML_loadPage() {
     document.getElementById("loadingText_BG").style.display = "none";
     document.getElementById("accountIcon").src = userDetails.photoURL;
     document.getElementById("accDet_name").innerHTML = userDetails.name;
-    document.getElementById("accDet_user").innerHTML = userGameData.gameName;
+    document.getElementById("accDet_user").value = userGameData.gameName;
 }
 
 /*****************************************************/
@@ -99,6 +99,7 @@ function HTML_loadPage() {
 function HTML_returnPage() {
     document.getElementById("landingPage").style.display = "block";
     document.getElementById("gamePage").style.display = "none";
+    document.getElementById("breadcrumb").innerHTML = "Home"
 }
 
 

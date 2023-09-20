@@ -136,6 +136,12 @@ canvas {
   margin-left: 0;
 }
 
+#breadcrumb {
+  font-size: 1rem;
+  margin: auto;
+  grid-column: 2/4;
+}
+
 #title {
   text-align: center;
   grid-column: 7/10;
