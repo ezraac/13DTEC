@@ -58,15 +58,22 @@
       <p style="text-align: center;">Game isn't available currently.</p>
     </div>
     
-    <!-- <div id="accountDet_modal">
-      <a class="close" onclick="HTML_closeModal('accountDet')" style="position: absolute; right: 0;">&times;</a>
-      <h3 style="text-align: center;">My Account Details</h3>
+    <div id="accountScore_modal">
+      <a class="close" onclick="HTML_closeModal('accountScore')" style="position: absolute; right: 0;">&times;</a>
+      <h3 style="text-align: center; grid-column: 1/4; grid-row: 1;">My Account Scores</h3>
 
-      <label for="name">Name</label><br></br>
-      <input class="highlightText" type="text" value="ezra" name="name">
-      <label for="username">Username</label><br></br>
-      <input type="submit" hidden>
-    </div> -->
+      <h3 style="grid-column: 1; grid-row: 2; text-align: center;">Pop The Ball</h3>
+      <p style="grid-column: 1; grid-row: 3; text-align: center;" id="PTB_score"></p>
+
+      <h3 style="grid-column: 2; grid-row: 2; text-align: center;">Tic Tac Toe</h3>
+      <p style="grid-column: 2; grid-row: 3; text-align: center;" id="TTT_wins">0 Wins</p>
+
+      <h3 style="grid-column: 3; grid-row: 2; text-align: center;">Guess The Number</h3>
+      <p style="grid-column: 3; grid-row: 3; text-align: center;" id="GTN_wins">0 Wins</p>
+
+
+
+    </div>
   </div>
 
   <header>
@@ -108,7 +115,7 @@
           <input style="font-size: 1vw; width: 100%; border: none;" id="accDet_user" class="highlightText" value="ezra" disabled>
 
           <button class="menu-button" id="accDet_editUser" style="width: 13vw;" onclick="HTML_changeUsername()">Edit Username</button>
-          <button class="menu-button" id="accDet_viewScores" style="width: 13vw;">View Game Scores</button>
+          <button class="menu-button" id="accDet_viewScores" style="width: 13vw;" onclick="HTML_openModal('accountScore')">View Game Scores</button>
 
         </div>
       </div>

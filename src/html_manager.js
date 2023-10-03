@@ -89,6 +89,7 @@ function HTML_loadPage() {
     document.getElementById("accountIcon").src = userDetails.photoURL;
     document.getElementById("accDet_name").innerHTML = userDetails.name;
     document.getElementById("accDet_user").value = userGameData.gameName;
+    document.getElementById("PTB_score").innerHTML = `${userGameData.PTB_avgScore}s`;
 }
 
 /*****************************************************/
@@ -134,8 +135,8 @@ function HTML_openModal(modal) {
         case "nA":
             $("#nA_modal").toggleClass("nA-open");
             break;
-        case "accountDet":
-            $("#accountDet_modal").toggleClass("account-open");
+        case "accountScore":
+            $("#accountScore_modal").toggleClass("account-open");
             break;
     }
    
@@ -148,8 +149,8 @@ function HTML_closeModal(modal) {
             $("#nA_modal").toggleClass("nA-open");
             break;
         
-        case "accountDet":
-            $("#accountDet_modal").toggleClass("account-open");
+        case "accountScore":
+            $("#accountScore_modal").toggleClass("account-open");
             break;
     }
     document.getElementById("modal_background").style.top = "-100%";

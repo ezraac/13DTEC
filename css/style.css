@@ -242,7 +242,6 @@ canvas {
 #hI_background {
   width: 100%;
   height: 35vw;
-  background-color: #effdff;
   z-index: 1;
 }
 
@@ -280,10 +279,14 @@ canvas {
   background-color: #61d6e6;
 }
 
-#accountDet_modal {
+#accountScore_modal {
+  display: grid;
+  grid-template-columns: repeat(3, 19.333vw);
+  grid-template-rows: repeat(3, 4.3333vw);
   width: 60vw;
-  height: 40vw;
-  margin: -41vw auto;
+  height: 15vw;
+  top: -10vw;
+  margin-left: 20vw;
   transition: all 0.3s;
   border-radius: 1vw;
   position: relative;
