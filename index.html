@@ -14,6 +14,10 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animations.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Signika&display=swap" rel="stylesheet">
   <!-- P5.js ***************************************-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/addons/p5.sound.min.js"></script>
@@ -47,74 +51,164 @@
   <div id="loadingText_BG">
     <h1 id="loadingText">LOADING...</h1>
   </div>
+
+  <div id="modal_background">
+    <div id="nA_modal">
+      <div style="float: right;">
+        <a class="close" onclick="HTML_closeModal('nA')">&times;</a>
+      </div>
+      
+      <h3 style="text-align: center;">Sorry!</h3>
+      <p style="text-align: center;">Game isn't available currently.</p>
+    </div>
+    
+    <div id="accountScore_modal">
+      <a class="close" onclick="HTML_closeModal('accountScore')" style="position: absolute; right: 0;">&times;</a>
+      <h3 style="text-align: center; grid-column: 1/4; grid-row: 1;">My Account Scores</h3>
+
+      <h3 style="grid-column: 1; grid-row: 2; text-align: center;">Pop The Ball</h3>
+      <p style="grid-column: 1; grid-row: 3; text-align: center;" id="PTB_score"></p>
+
+      <h3 style="grid-column: 2; grid-row: 2; text-align: center;">Tic Tac Toe</h3>
+      <p style="grid-column: 2; grid-row: 3; text-align: center;" id="TTT_wins">0 Wins</p>
+
+      <h3 style="grid-column: 3; grid-row: 2; text-align: center;">Guess The Number</h3>
+      <p style="grid-column: 3; grid-row: 3; text-align: center;" id="GTN_wins">0 Wins</p>
+
+
+
+    </div>
+  </div>
+
+  <header>
+    <div id="navigation" class="container" style="display: none;">
+      <img src="images/game icon.png" id="gameIcon">
+      <a id="breadcrumb">Home</a>
+
+      <h3 id="title">arcade-o</h3>
+
+      <div id="searchContainer" class="container">
+        <input type="text" placeholder="Search" id="search">
+      </div>
+
+      <div id="hamburgerContainer">
+        <img src="images/Hamburger_icon.png" id="hamburgerIcon" class="navbutton">
+
+        <div id="hamburgerMenu">
+          <h3 style="text-align: center; font-size: 2vw; margin-top: 0;">Menu</h3>
+
+          <button class="menu-button" id="hamburger_home" style="width: 9vw;">Home</button>
+          <button class="menu-button" id="hamburger_games" style="width: 9vw;">Games</button>
+          <button class="menu-button" id="hamburger_help" style="width: 9vw;">Help</button>
+          <button class="menu-button" id="hamburger_admin" style="width: 9vw;" onclick="ad_admin()">Admin</button>
+
+        </div>
+      </div>
+
+      
+      <div id="accountContainer">
+        <img src="images/account (1).png" id="accountIcon" class="navbutton">
+
+        <div id="accountDetails">
+          <h3 style="text-align: center; font-size: 2vw; margin-top: 0;">My Account</h3>
+          <p style="text-decoration: underline; text-align: center;;">Name</p>
+          <p id="accDet_name" class="highlightText">Ezra Chai</p>
+
+          <p style="text-decoration: underline; text-align: center;">Username</p>
+          <input style="font-size: 1vw; width: 100%; border: none;" id="accDet_user" class="highlightText" value="ezra" disabled>
+
+          <button class="menu-button" id="accDet_editUser" style="width: 13vw;" onclick="HTML_changeUsername()">Edit Username</button>
+          <button class="menu-button" id="accDet_viewScores" style="width: 13vw;" onclick="HTML_openModal('accountScore')">View Game Scores</button>
+
+        </div>
+      </div>
+
+      <img src="images/magnifying glass.png" id="searchIcon" class="navbutton">
+  </header>
   <!--***************************************************
   //  landingPage
   ****************************************************-->
-  <section id="landingPage">
-    
-    <header>
-      <div id="navigation" class="container">
-        <img src="images/game icon.png" id="gameIcon">
-        <p id="breadcrumb" style="font-size: 1rem; text-align: center; margin: auto;">Home</p>
-
-        <h3 id="title">arcade-o</h3>
-
-        <div id="searchContainer" class="container">
-          <input type="text" placeholder="Search" id="search">
-        </div>
-
-        <div id="hamburgerContainer">
-          <img src="images/Hamburger_icon.png" id="hamburgerIcon" class="navbutton">
-
-          <div id="hamburgerMenu">
-            <h3 style="text-align: center; font-size: 2vw; margin-top: 0;">Menu</h3>
-
-            <button class="button" id="hamburger_home" style="width: 9vw;">Home</button>
-            <button class="button" id="hamburger_games" style="width: 9vw;">Games</button>
-            <button class="button" id="hamburger_help" style="width: 9vw;">Help</button>
-            <button class="button" id="hamburger_admin" style="width: 9vw;">Admin</button>
-
-          </div>
-        </div>
-        
+  <section id="landingPage" style="position: absolute;">
 
 
-        <div id="accountContainer">
-          <img src="images/account (1).png" id="accountIcon" class="navbutton">
-
-          <div id="accountDetails">
-            <h3 style="text-align: center; font-size: 2vw; margin-top: 0;">My Account</h3>
-            <p style="text-decoration: underline; text-align: center;;">Name</p>
-            <p id="accDet_name" class="highlightText">Ezra Chai</p>
-
-            <p style="text-decoration: underline; text-align: center;">Username</p>
-            <p id="accDet_user" class="highlightText">ezraa11232142351</p>
-
-            <button class="button" id="accDet_editUser" style="width: 13vw;">Edit Account Details</button>
-            <button class="button" id="accDet_viewScores" style="width: 13vw;">View Game Scores</button>
-
-          </div>
-        </div>
-
-        <img src="images/magnifying glass.png" id="searchIcon" class="navbutton">
-    </header>
     <main>
+      <div id="hI_background">
+        <img src="images/filler image.png" id="heroImage">
+        <button class="button" id="exploreButton" onclick="HTML_scrollGames()">EXPLORE</button>
+      </div>
 
+      <div id="cardsContainer">
+        <div id="card1" class="card">
+          <h3 style="text-align: center; font-size: 2vw;">Pop The Ball</h3>
+          <p style="text-align: center; font-size: 1vw;">A simple game where balls spawn and you will have to click them
+            as fast as possible!</p>
+
+          <button class="button" onclick="game_enterGame('PTB')">Play!</button>
+        </div>
+
+        <div id="card2" class="card">
+          <h3 style="text-align: center; font-size: 2vw;">Tic Tac Toe</h3>
+          <p style="text-align: center; font-size: 1vw;">Classic Tic Tac Toe! Try get a row of X or O depending on which
+            one you are to win!</p>
+
+          <button class="button" onclick="HTML_openModal('nA')">Play!</button>
+        </div>
+
+        <div id="card3" class="card">
+          <h3 style="text-align: center; font-size: 2vw;">Guess The Number</h3>
+          <p style="text-align: center; font-size: 1vw;">A game where you and your opponent take turns guessing your
+            randomly generated number!</p>
+
+          <button class="button" onclick="HTML_openModal('nA')">Play!</button>
+        </div>
+      </div>
       </div>
     </main>
+
+    <footer>
+      <div id="footer">
+
+      </div>
+    </footer>
   </section>
 
   <!--***************************************************
   //  gamePage
   ****************************************************-->
   <section id="gamePage">
-    <div class="w3-container">
+
+    <div id="statsDiv">
+      <h3 id="gameTitle" style="text-align: center;">POP THE BALL</h3>
+
+      <div id="game_textDiv">
+        <p style="text-decoration: underline; text-align: center;">Average Hit Score</p>
+        <p class="highlightText" id="hitscore">0</p>
+
+        <p style="text-decoration: underline; text-align: center;">Highest AHS</p>
+        <p class="highlightText" id="highavgscore">0</p>
+
+        <p style="text-decoration: underline; text-align: center;">Fastest Time</p>
+        <p class="highlightText" id="highscore">0</p>
+
+        <p id="misses">Misses: 0</p>
+        <p class="highlightText" id=gameTimer>Time: 0s</p>
+      </div>
+
+      <button class="menu-button" onclick="game_gameStart()" style="width: 90%;" id="game_startButton">START</button>
+      <button class="menu-button" onclick="HTML_returnPage()" style="width: 90%;">RETURN</button>
+    </div>
+
+    <div id="gameDiv">
+      <div id="game_canvasDiv"></div>
+    </div>
+
+
+    <!-- <div class="w3-container">
       <h1 class="w3-wide">Pop the Ball</h1>
       <div class="w3-container w3-third" id="game_oneThird">
         <h1 id="hellouser" style="text-align: center;">Hello Tommy</h1>
         <div class="w3-container w3-third">
 
-          <!--game details for popBall-->
           <div class="w3-container" id="game_textDiv">
             <p id="hitscore">Average Hit Score: 0</p>
             <p id="highavgscore">Highest AHS: 0</p>
@@ -134,10 +228,9 @@
       </div>
       <div class="w3-container w3-twothird" id="game_twoThird">
 
-        <!--canvas positioned over this div-->
         <div class="w3-container w3-twothird" id="game_canvasDiv"></div>
       </div>
-    </div>
+    </div> -->
   </section>
 
   <!--*******************************************************************************
@@ -228,12 +321,7 @@
   <!--*************************************************************
 			ADMIN PAGE 
   **************************************************************-->
-  <section id="s_adminPage" class="w3-grey">
-    <div class="w3-row">
-      <div class="w3-container w3-grey w3-col m10">
-        <h1 class="w3-wide">Admin page</h1>
-      </div>
-    </div>
+  <section id="s_adminPage" style="margin-top: 15vh;">
 
     <!--home button-->
     <nav id="n_admin" class="w3-bar stickyNav">

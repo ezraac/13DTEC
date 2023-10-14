@@ -6,8 +6,11 @@
 html {
   margin: 0px;
   padding: 0px;
-  font-family: tahoma;
+  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Signika', sans-serif;
+  line-height: 1.5;
   color: black;
+  /* font-family: 'Josefin Sans', sans-serif; */
 }
 
 body {
@@ -15,6 +18,15 @@ body {
   grid-template-areas:
     "header"
     "main";
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Signika', sans-serif;
+}
+
+h3 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Signika', sans-serif;
+  font-weight: 400;
+  margin: 10px 0;
 }
 
 p {
@@ -24,6 +36,7 @@ p {
 
 canvas {
   display: block;
+  border-radius: 1vw;
 }
 
 #landingPage {
@@ -36,18 +49,9 @@ canvas {
   height: 100vh;
 }
 
-#helloHeader {
-  height: 15vh;
-}
 
 .container {
   background-color: #61d6e6;
-  border-radius: 50vw;
-  padding: 1vh 1vw 1vh 1vw;
-}
-
-.subContainer {
-  background-color: #addfe6;
   border-radius: 50vw;
   padding: 1vh 1vw 1vh 1vw;
 }
@@ -59,7 +63,7 @@ canvas {
   margin-top: -1vh;
 }
 
-.button {
+.menu-button {
   font-size: 1vw;
   background-color: #ffffff;
   border-radius: 1vw;
@@ -69,6 +73,29 @@ canvas {
   display: block;
 }
 
+.button {
+  font-size: 1vw;
+  background-color: #92e8f3;
+  border-radius: 1vw;
+  border-style: none;
+  padding: 1vw 1vw 1vw 1vw;
+  margin: 1vw auto;
+  display: block;
+}
+
+.card {
+  width: 75%;
+  height: 75%;
+  background-color: white;
+  display: inline-block;
+  border-radius: 1vw;
+  margin: auto;
+}
+
+.modal {
+
+  max-width: 60vw;
+}
 /*------------------------------------------------------------*
   LANDING page styling
 /*------------------------------------------------------------*/
@@ -81,12 +108,12 @@ canvas {
 }
 
 #loadingText {
-  font-size: 5vw;
+  font-size: 4vw;
 }
 
 #loadingText_BG {
   background-color: #61d6e6;
-  border-radius: 50vw;
+  border-radius: 5vw;
   padding: 1vw;
 
   position: absolute;
@@ -99,12 +126,13 @@ canvas {
 /* nav bar css */
 #navigation {
   margin-left: 10vw;
-  margin-right: 10vw;
-  margin-top: 25px;
+  top: 25px;
 
   display: grid;
   grid-template-columns: repeat(16, 5vw);
   transition: all 0.3s;
+  position: absolute;
+  z-index: 2;
 }
 
 #gameIcon {
@@ -115,6 +143,12 @@ canvas {
   grid-column: 1;
   margin: auto;
   margin-left: 0;
+}
+
+#breadcrumb {
+  font-size: 1rem;
+  margin: auto;
+  grid-column: 2/4;
 }
 
 #title {
@@ -213,60 +247,126 @@ canvas {
   background-repeat: no-repeat;
 }
 
+/* hero image */
+#hI_background {
+  width: 100%;
+  height: 35vw;
+  z-index: 1;
+}
+
+#heroImage {
+  width: 50vw;
+  height: 25vw;
+  transform: translate(50%, 35%);
+  opacity: 100% !important;
+}
+
+#exploreButton {
+  position: relative;
+  background-color: #92e8f3;
+  color: black;
+}
+
+#modal_background {
+  position: fixed;
+  z-index: 3;
+  left: 0;
+  top: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgxb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+#nA_modal {
+  transition: all 0.3s;
+  margin: -10vw auto;
+  height: 7.5vw;
+  width: 60vw;
+  border-radius: 1vw;
+  z-index: 1;
+  background-color: #61d6e6;
+}
+
+#accountScore_modal {
+  display: grid;
+  grid-template-columns: repeat(3, 19.333vw);
+  grid-template-rows: repeat(3, 4.3333vw);
+  width: 60vw;
+  height: 15vw;
+  top: -16vw;
+  margin-left: 20vw;
+  transition: all 0.3s;
+  border-radius: 1vw;
+  position: relative;
+  z-index: 1;
+  background-color: #61d6e6;
+  padding: 1vw;
+}
+
+#cardsContainer {
+  width: 75%;
+  height: 25vw;
+  background-color: #61d6e6;
+  margin: 5vh auto;
+  border-radius: 1vw;
+  display: grid;
+  grid-template-columns: repeat(3, 33.3333%);
+}
+
+#footer {
+  height: 10vw;
+  background-color: #61d6e6;
+  
+}
+
+
 
 
 
 /*game page css*/
-#game_oneThird {
-  height: 80vh;
-  border-radius: 20px 0px 0px 20px;
-  background-color: rgb(51, 51, 51);
+#statsDiv {
+  position: absolute;
+  height: 77.5vh;
+  width: 15vw;
+  background-color: #61d6e6;
+  border-radius: 1vw;
+  margin-top: 20vh;
+  margin-left: 10vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
 }
 
-#game_twoThird {
-  height: 80vh;
-  border-radius: 0px 20px 20px 0px;
+#gameDiv {
+  height: 77.5vh;
+  width: 62vw;
+  background-color: #61d6e6;
+  border-radius: 1vw;
+  margin-top: 20vh;
+  margin-left: 30vw;
   position: relative;
-  background-color: rgb(51, 51, 51);
 }
 
 #game_canvasDiv {
-  height: 70vh;
-  width: 60vw;
   position: absolute;
+  height: 72.5vh;
+  width: 58vw;
   left: 50%;
   top: 50%;
 
   transform: translate(-50%, -50%);
+
 }
 
 /*text div css*/
 #game_textDiv {
-  background-color: rgb(92, 92, 92);
+  background-color: #92e8f3;
   border-radius: 20px;
   font-size: larger;
-  width: 30vw;
-  height: 65vh;
-}
-
-#game_timeDiv {
-  background-color: rgb(24, 230, 72);
-  border-radius: 20px;
-  width: 10vw;
-}
-
-#game_startButton {
-  margin-top: 20px;
-  background-color: rgb(24, 230, 72);
-  color: white;
-  border-radius: 20px;
-}
-
-#game_loginButton {
-  margin-top: 20px;
-  background-color: rgb(24, 230, 72);
-  color: white;
-  border-radius: 20px;
+  width: 12.5vw;
+  height: 23vw;
+  padding: 0.5vw;
+  margin: auto;
 }
 
 /*------------------------------------------------------------*
@@ -302,6 +402,14 @@ canvas {
 #b_gpAdmin {
   display: none;
   /* none = don't display element */
+}
+
+/*------------------------------------------------------------*
+  Media Queries
+/*------------------------------------------------------------*/
+@media screen and (max-width: 1024px) {
+  
+  
 }
 
 /*************************************************************

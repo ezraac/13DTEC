@@ -2,12 +2,12 @@
   transform: translate(-20vw, 0);
 }
 
-.button:hover {
+.button:hover, .menu-button:hover {
   box-shadow: #888888 1px 2px;
   transition: all 0.3s ease;
 }
 
-.button:active {
+.button:active, .menu-button:active{
   box-shadow: none;
   transform: translateY(1px);
 }
@@ -21,4 +21,33 @@
 .navbutton:active {
   box-shadow: none;
   transform: translateY(1px);
+}
+
+.nA-open {
+  transform: translate(0, 10vw);
+}
+
+.account-open {
+  transform: translate(0, 23vw);
+}
+
+.sticky {
+  position: fixed !important;
+  margin-top: 0px !important;
+  top: 0 !important;
+  border-radius: 0px 0px 1vw 1vw;
+}
+
+.close{
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  padding: 0.5vw;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
