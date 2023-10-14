@@ -48,7 +48,7 @@ function ad_admin() {
 	    document.getElementById('s_adminPage').style.display   = "block";
 		ad_user();
 	}
-  }
+}
   
   /**************************************************************/
   // ad_home()

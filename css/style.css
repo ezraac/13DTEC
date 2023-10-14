@@ -6,8 +6,11 @@
 html {
   margin: 0px;
   padding: 0px;
-  font-family: tahoma;
+  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Signika', sans-serif;
+  line-height: 1.5;
   color: black;
+  /* font-family: 'Josefin Sans', sans-serif; */
 }
 
 body {
@@ -15,6 +18,15 @@ body {
   grid-template-areas:
     "header"
     "main";
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Signika', sans-serif;
+}
+
+h3 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Signika', sans-serif;
+  font-weight: 400;
+  margin: 10px 0;
 }
 
 p {
@@ -37,9 +49,6 @@ canvas {
   height: 100vh;
 }
 
-#helloHeader {
-  height: 15vh;
-}
 
 .container {
   background-color: #61d6e6;
@@ -99,12 +108,12 @@ canvas {
 }
 
 #loadingText {
-  font-size: 5vw;
+  font-size: 4vw;
 }
 
 #loadingText_BG {
   background-color: #61d6e6;
-  border-radius: 50vw;
+  border-radius: 5vw;
   padding: 1vw;
 
   position: absolute;
@@ -271,7 +280,7 @@ canvas {
 
 #nA_modal {
   transition: all 0.3s;
-  margin: -8.5vw auto;
+  margin: -10vw auto;
   height: 7.5vw;
   width: 60vw;
   border-radius: 1vw;
@@ -285,7 +294,7 @@ canvas {
   grid-template-rows: repeat(3, 4.3333vw);
   width: 60vw;
   height: 15vw;
-  top: -10vw;
+  top: -16vw;
   margin-left: 20vw;
   transition: all 0.3s;
   border-radius: 1vw;
@@ -393,6 +402,14 @@ canvas {
 #b_gpAdmin {
   display: none;
   /* none = don't display element */
+}
+
+/*------------------------------------------------------------*
+  Media Queries
+/*------------------------------------------------------------*/
+@media screen and (max-width: 1024px) {
+  
+  
 }
 
 /*************************************************************

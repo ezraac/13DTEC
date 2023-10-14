@@ -24,11 +24,11 @@
 }
 
 .nA-open {
-  transform: translate(0, 8.5vw);
+  transform: translate(0, 10vw);
 }
 
 .account-open {
-  transform: translate(0, 16vw);
+  transform: translate(0, 23vw);
 }
 
 .sticky {
